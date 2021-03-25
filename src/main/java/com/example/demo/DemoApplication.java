@@ -11,6 +11,7 @@ public class DemoApplication {
 		SpringApplication.run(DemoApplication.class, args);
 		Calculator c = new Calculator();
 		System.out.println(c.add(2, 3));
+		System.out.println(c.add(12, 10));
 	}
 
 }

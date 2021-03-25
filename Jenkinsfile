@@ -10,25 +10,27 @@ pipeline {
                         bat 'mvn clean compile'
                        }
             }
-            stage('Test') {
-                 steps{
-                   bat 'mvn test'
-                     }
+            }
+//             stage('Test') {
+//                  steps{
+//                    bat 'mvn test'
+//                      }
+//                      }
 
-            post {
-                always {
-                    junit '**/target/surefire-reports/TEST-*.xml'
-                }
-            }
+//             post {
+//                 always {
+//                     junit '**/target/surefire-reports/TEST-*.xml'
+//                 }
+//             }
 
-        stage('Publish'){
-            steps{
-                bat 'mvn package'
-            }
-            post{
-                success{
-                    archiveArtifacts 'target/*.jar'
-                }
-            }
-       }
+//         stage('Publish'){
+//             steps{
+//                 bat 'mvn package'
+//             }
+//             post{
+//                 success{
+//                     archiveArtifacts 'target/*.jar'
+//                 }
+//             }
+//        }
     }

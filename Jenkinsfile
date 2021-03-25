@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                git 'https://github.com/EneAndrei01/java-rest-api-calculator'
+                git 'https://github.com/ScarlettQnR/test'
                 bat 'mvn clean compile'
             }
         }
@@ -31,4 +31,3 @@ pipeline {
                 }
             }
     }
-}
